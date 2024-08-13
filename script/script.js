@@ -7,7 +7,9 @@
  let getMovie = () => {
  let movieName = movieNameRef.value;
  let key = "5a527735";
- let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+ let url = `http://localhost:8080/http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+
+ console.log("Fetching URL:", url);
  //If input field is empty
  if (movieName.length <= 0) {
      result.innerHTML = `<h3 class="msg">Please Enter A Valid Movie Name</h3>`;
